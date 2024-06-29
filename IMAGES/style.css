@@ -1,0 +1,551 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color:black;
+}
+
+#header{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+    z-index: -1; 
+}
+
+
+.nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navLinks{
+    position: relative;
+    display: flex;
+    transition: 1s;
+}
+.navLinks ul li {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    transition: 1s;
+}
+
+.navLinks ul li a{
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.navLinks ul li a:hover{
+    color: crimson;
+    transition: 1s;
+}
+
+
+.details{
+    position: relative;
+    margin-top: 10%;
+    padding: 10px 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.details h1{
+    position: relative;
+    color: crimson;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+}
+
+.text{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color:antiquewhite;
+    position: relative;
+    padding: 10px 20px;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.btn{
+    position: relative;
+    margin-top: 3%;
+    font-weight: bolder;
+    padding: 10px 20px;
+    border-radius: 22px;
+}
+
+.btn:hover{
+    background-color: crimson;
+    transition: 1s;
+}
+.showLinks{
+    display: none;
+}
+
+.hideLinks{
+    display: none;
+}
+
+
+/* AT MEDIA RESPONSIVENESS FOR THE MOBILE PHONES */
+
+@media only screen and (max-width: 500px) {
+
+
+    .logo img{
+        width: 50px;
+    }
+
+    .showLinks{
+        position: absolute;
+        display: block;
+        top: 10px;
+        right: 5%;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    
+
+    .hideLinks{
+        position: fixed;
+        display: block;
+        color: white;
+        top: 0;
+        padding: 10px 20px;
+
+    }
+
+    .navLinks{
+        display: none;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    .navLinks.active{
+        display: block;
+        transition: 0.5s;
+    }
+
+
+    .navLinks ul li{
+    display: block;
+    padding: 10px 20px;
+    }
+
+    .navLinks ul li a{
+        display: block;
+        color: white;
+        margin-top: 20%;
+    }
+ 
+    
+    .show-navLinks{
+        display: block;
+        position: relative;
+        
+    }
+
+    .details h1{
+        position: relative;
+        margin-top: 10%;
+        font-size: 2.5rem;
+    }
+
+    .text{
+        position: relative;
+        padding: 10px 20px;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        left: -1%;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    .btn{
+        position: relative;
+        left: -1%;
+        margin-top: 10%;
+        padding: 10px 20px;
+        border-radius: 22px;
+    }
+
+}
+
+
+/* PROJECT SECTION */
+
+#projects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.title-projects{
+    position: relative;
+    margin-top: 20%;
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px 20px;
+    color:crimson;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper{
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+    height: fit-content;
+}
+.swiper-wrapper{
+    position: relative;
+}
+
+
+.swiper-slide img{
+    position: relative;
+    width: 100%;
+
+}
+
+
+.close-icon{
+    display: none;
+}
+
+/* PROJECT RESPONSIVENESS */
+
+@media only screen and (max-width: 500px) {
+    #projects{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #projects .title-projects{
+        position: relative;
+        top: 30%;
+        font-size: 2.5rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        color:crimson;
+    }
+
+   
+
+    .container{
+        position: relative;
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/* ABOUT -SECTION */
+#aboutSection{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px 20px;
+    color:crimson;
+}
+
+.content{
+    position: relative;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    margin: 30px auto 0;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.content img{
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+
+
+.content .right{
+    padding: 5px 10px;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: white;
+}
+
+
+/* MEDIA RESPONSIVENESS IN THE ABOUT SECTION */
+
+@media only screen and (max-width: 500px) {
+    .title{
+        position: relative;
+        top: 0;
+        font-size: 1.5rem;
+        right: 1%;
+        font-weight: bolder;
+        padding: 10px 20px;
+        color:crimson;
+    }
+    
+    .content{
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        margin: 10px auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        right: 10%;
+        padding: 10px 20px;
+    }
+
+    .content img{
+        position: relative;
+        left: 15%;
+        width: 300px;
+        height:300px;
+        padding: 20px;
+    }
+    
+    
+    
+    .content .right{
+        position: relative;
+        width: 100%;
+        padding: 10px 20px;
+        text-align: center;
+        left: 10%;
+        margin-top: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: white;
+    }
+
+}
+
+
+/* CONTACT SECTION */
+#contactUs{
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+form{
+    width:40%;
+    height: 70%;
+    background-color:black;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 20px auto 0px;
+    margin-bottom: 20px;
+    box-shadow: 2px 5px 10px 10px crimson;
+}
+
+form label{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+}
+
+form input{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 40px;
+    font-size: 1rem;
+    margin: 10px;
+    border-radius: 22px;
+}
+
+form textarea{
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+form textarea ::placeholder{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 20px;
+    color: white;
+}
+
+.button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 22px;
+    font-weight: bolder;
+    background-color: white;
+    transition: 1s;
+}
+
+.button:hover{
+  background-color: crimson;
+}
+
+
+
+/* FORM PHONE RESPONSIVENESS */
+@media only screen and (max-width: 500px){
+
+  
+    form{
+        position: relative;
+        width:70%;
+        height: 70%;
+        right: 1%;
+        background-color: black;
+        text-align: center;
+        padding: 5px 10px;
+        margin: 0 auto 0;
+        box-shadow: 2px 5px 5px 10px crimson;
+    }
+
+    form label{
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+    
+    form input{
+        position: relative;
+        padding: 5px 10px;
+        width: 100%;
+        right: 5%;
+        font-size: 0.8rem;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 10px;
+        border-radius: 22px;
+    }
+    
+    form textarea{
+        position: relative;
+        font-family: 'Courier New', Courier, monospace;
+        width: 100%;
+        right: 10px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 1rem;
+    }
+    
+    form textarea ::placeholder{
+        padding: 10px 20px;
+    }
+}
+
+/* FOOTER SECTION */
+#footer-Section{
+    margin-top: 50px;
+    height: 30vh;
+    width: 100%;
+    background-color:crimson;
+}
+
+#footer-Section h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding:10px 20px;
+}
+
+#footer-Section button{
+    padding: 10px 20px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    left: 45%;
+    border-radius: 22px;
+}
+
+/* FOOTER SECTION RESPONSIVENESS */
+@media only screen and (max-width: 500px) {
+
+    #footer-Section{
+        background-color:crimson;
+    }
+
+    #footer-Section h1{
+        position: relative;
+        font-family: 'Courier New', Courier, monospace;
+        right: 0;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bolder;
+        padding:30px;
+    }
+    
+    #footer-Section button{
+        padding: 10px 20px;
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        left: 45%;
+        border-radius: 22px;
+    }
+}

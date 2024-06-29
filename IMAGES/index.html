@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Capture</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://www.fontspace.com/super-funky-font-f100518">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <video id="video-bg" autoplay muted loop>
+        <source src="./IMAGES/190153-887495560.mp4" type="video/mp4">
+    </video>
+    <div class="nav">
+        <div class="logo"><img src="./IMAGES/camera-1799852_640.png" width="100px" alt=""></div>
+        <div class="showLinks"><i class="fa-solid fa-bars"></i></div>
+        <div class="navLinks">
+            <ul class="all-links">
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#aboutSection">ABOUTUS</a></li>
+                <li><a href="#contactUs">CONTACTUS</a></li>
+            </ul>
+            <div class="hideLinks"><i class="fa-solid fa-x"></i></div>
+        </div>
+    </div>
+    <div class="details">
+        <h1>PikPerfect</h1>
+        <p class=text>
+            Welcome to PikPerfect, where moments become timeless treasures. Our passion for photography drives us to capture the beauty of life in every frame.</p>
+            <a href="#projects"><button class="btn">EXPLORE US</button></a>
+        </div>
+    
+  </header>
+
+
+  <!-- MY PROJECT SECTION -->
+<section id="projects">
+    <div class="title-projects">MY PROJECTS</div>
+    <div class="container">
+        <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="./IMAGES/b1efce8407c35c71c5c3d434cbe43d9d95d90ac7.jpeg" alt=""></div>
+      <div class="swiper-slide"><img src="./IMAGES/beautiful-woman-autumn-setting.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="./IMAGES/black-boy-posing-with-vinyls.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="./IMAGES/c8a4578c74ec581671c21453d6676ca11a474f8e.jpeg" alt=""></div>
+      <div class="swiper-slide"><img src="./IMAGES/handsome-man-autumn-setting.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="./IMAGES/young-african-american-woman-smiling-looking-away.jpg" alt=""></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    </div>
+    </div>
+</section>
+    
+
+    <!-- ABOUT SECTION -->
+    <section id="aboutSection">
+        <div class="title">ABOUT US</div>
+        <div class="content">
+        <div class="left">
+            <img src="./IMAGES/camera-1705135_640.jpg" alt="">
+        </div>
+        <div class="right">
+            Welcome to PicPerfect, where we transform moments into timeless memories.
+             As a leading photography company, 
+             we specialize in capturing the essence of every occasion with 
+             unparalleled skill and creativity. Whether it's a wedding, 
+             family portrait, corporate event, or a special milestone, 
+             our team of dedicated photographers is 
+             committed to delivering stunning imagery that exceeds expectations.
+              With our passion for storytelling through visuals,
+               we aim to preserve the beauty and emotion of life's most precious moments.
+             Discover the magic of PicPerfect and let us create unforgettable memories together.
+        </div>
+    </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section id="contactUs">
+        <div class="title">CONTACT US</div>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="baf895ba-d33a-4cce-8b0d-15332fa3e5be">
+            <label for="Your Name">Your Name:</label>
+            <input type="text" name="Your Name" required>
+            <br>
+            <label for="Your Email">Your Email:</label>
+            <input type="email" name="Your Email" required>
+            <br>
+            <br>
+            <textarea name="message" cols="40" rows="10" placeholder="Message" required></textarea>
+            <br>
+            <br>
+            <button type="submit" class="button">SUBMIT</button>
+       </form>
+    </section>
+
+    <section id="footer-Section">
+        <h1>BRING YOUR CREATIVITY INTO LIFE</h1>
+        <a href="./index.html"><button id="top-button">TOP</button></a>
+    </section>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction:false,
+        },
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>   
+<script src="./app.js"></script>
+</body>
+</html>
